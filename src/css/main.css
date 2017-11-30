@@ -1,92 +1,99 @@
-.container-about {
-  max-width: 100vw;
-  max-height: 100vh;
-  width: 100vw;
+.about {
+  width: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .about p {
+    width: 48vw;
+    text-align: center;
+    color: gray;
+    font-size: 25px;
+    font-family: 'Open Sans Condensed', sans-serif; }
+  .about h2 {
+    font-family: 'Roboto Condensed:300', sans-serif;
+    font-size: 40px;
+    color: gray;
+    text-transform: uppercase; }
 
-.container-about hr {
-  width: 79px;
-  height: 3px;
-  background-color: red; }
-
-.container-about p {
-  max-width: 48vw;
-  text-align: center;
-  color: gray;
-  font-size: 20px;
-  font-family: 'Open Sans Condensed', sans-serif; }
-
-.container-about h2 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  color: gray; }
-
-.container-header {
-  max-height: 100vh;
-  width: auto;
-  height: 100vh;
-  margin: 25px;
+.header {
+  height: 97vh;
+  margin: 25px 25px 0 25px;
+  overflow: hidden;
   background-image: url("https://images81.fotosik.pl/922/94cad9e6ff8b66e3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
-  text-align: center;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column; }
-
-.container-header h3 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px; }
-
-.container-header h4 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 20px; }
-
-.container-header h1 xc {
-  font-size: 50px; }
-
-.container-header hr {
-  width: 79px;
-  height: 3px;
-  background-color: white; }
-
-.container-header p {
-  padding-top: 30px;
-  font-size: 16px;
-  font-family: 'Roboto Condensed:300', sans-serif; }
-
-.container-nav {
-  max-height: 100vh;
-  width: auto;
-  height: 15vh;
-  margin: 25px;
-  background-color: white; }
+  .header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    line-height: 40px; }
+  .header h2 {
+    font-family: 'Roboto Condensed:300', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px; }
+  .header h2:after {
+    content: "";
+    width: 79px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: 0; }
+  .header h3 {
+    font-family: 'Roboto Condensed:300', sans-serif;
+    font-size: 17px;
+    padding: 10px; }
+  .header .photography {
+    font-size: 30px;
+    padding-bottom: 40px; }
+  .header .text-header {
+    color: white;
+    text-align: center; }
 
 .nav {
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column; }
-
-ul {
-  display: flex;
-  flex-direction: row;
-  max-width: 100vw;
-  list-style-type: none;
-  justify-content: flex-end;
-  overflow: hidden;
-  background-color: #fff; }
-
-li a {
-  font-family: 'Open Sans Condensed', sans-serif;
-  display: block;
-  color: gray;
-  text-decoration: none;
-  padding: 0 40px; }
-
-.nav hr {
-  max-width: 100%;
   width: 100%;
-  color: lightgray; }
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid lightgray; }
+  .nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end; }
+  .nav li a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: gray;
+    text-decoration: none;
+    padding: 0 50px; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  font: inherit; }
+
+a {
+  text-decoration: none; }
+
+ol, ul {
+  list-style: none;
+  padding: 0; }
+
+blockquote {
+  quotes: none;
+  margin: 0; }
+
+button {
+  padding: 0; }
