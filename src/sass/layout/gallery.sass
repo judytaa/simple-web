@@ -1,0 +1,23 @@
+.gallery
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  height: 100vh
+  text-align: center
+
+  h2
+    font-family: 'Roboto Condensed:300', sans-serif
+    font-size: 40px
+    color: gray
+    text-transform: uppercase
+    position: relative
+
+  h2:after
+    content: ""
+    background-color: red
+    position: absolute
+    width: 79px
+    height: 3px
+    bottom: -20px
+    left: 50%
+    transform: translateX(-50%)
