@@ -1,0 +1,51 @@
+@import "../base/colors"
+
+.testimonials
+  font-family: 'Roboto Condensed:300', sans-serif
+  background-color: white
+  height: 100vh
+
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+
+  h3
+    color: $lightGray
+    position: relative
+    font-size: 25px
+
+  h3:after
+    content: ""
+    background-color: $coral
+    position: absolute
+    width: 32px
+    height: 3px
+    bottom: -20px
+    left: 50%
+    transform: translateX(-50%)
+
+  p
+    width: 25%
+    text-align: center
+    line-height: 30px
+    margin-top: 50px
+    color: $lightGray
+
+  p:last-child
+    color: $veryLightGray
+    font-size: 14px
+    position: relative
+    margin-top: 20px
+    ma
+
+  p:last-child:after
+    content: ""
+    border-radius: 50%
+    width: 12px
+    height: 12px
+    background-color: $coral
+    position: absolute
+    bottom: -40px
+    left: 50%
+    transform: translateX(-50%)
