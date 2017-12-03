@@ -156,12 +156,12 @@ button {
     font-family: 'Roboto Condensed:300', sans-serif;
     font-size: 17px;
     padding: 10px; }
-  .header-photography {
-    font-size: 30px;
-    padding-bottom: 40px; }
   .header-text {
     color: white;
     text-align: center; }
+  .header .photography {
+    font-size: 20px;
+    padding-bottom: 40px; }
 
 .nav {
   width: 100%;
@@ -275,11 +275,11 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .social .awesome {
+  .social__icon {
     display: inline-block;
     text-align: center;
     color: #a0a0a0; }
-    .social .awesome .fa {
+    .social__icon .fa {
       margin: 40px; }
 
 .contact {
