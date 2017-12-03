@@ -6,30 +6,13 @@
   justify-content: flex-start
   text-align: center
 
-  h2
-    font-family: 'Roboto Condensed:300', sans-serif
-    font-size: 40px
-    color: $lightGray
-    text-transform: uppercase
-    position: relative
-    margin-bottom: 60px
-
-  h2:after
-    content: ""
-    background-color: $coral
-    position: absolute
-    width: 79px
-    height: 3px
-    bottom: -20px
-    left: 50%
-    transform: translateX(-50%)
-
-.works
-  display: grid
-  margin: 0 auto
-  grid-template-columns: 30% 30% 30%
-  grid-column-gap: 25px
-  grid-row-gap: 25px
+  &-works
+    display: grid
+    margin: 0 auto
+    grid-template-columns: 30% 30% 30%
+    grid-column-gap: 25px
+    grid-row-gap: 25px
+    padding-top: 30px
 
   div:nth-child(1)
     grid-row: 1
@@ -55,14 +38,14 @@
     grid-row: 3
     grid-column: 3
 
-.btn
-  grid-column:  2
-  grid-row: 4
-  margin: 40px auto
-  width: 201px
-  height: 50px
-  background-color: $coral
-  color: white
-  font-size: 16px
-  font-family: 'Roboto Condensed:300', sans-serif
-  margin-bottom: 25px
+  &-btn
+    grid-column:  2
+    grid-row: 4
+    margin: 40px auto
+    width: 201px
+    height: 50px
+    background-color: $coral
+    color: white
+    font-size: 16px
+    font-family: 'Roboto Condensed:300', sans-serif
+    margin-bottom: 25px

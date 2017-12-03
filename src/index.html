@@ -12,9 +12,9 @@
 </head>
 <body>
 <div class="header">
-    <div class="text-header">
+    <div class="header-text">
         <h1>MariaAnna</h1>
-        <h1 class="photography">photography</h1>
+        <h1 class="header-photography">photography</h1>
         <h2>See the world through my lens</h2>
         <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,<br>sed diam nonummy nibh euismod tincidunt.</h3>
     </div>
@@ -39,29 +39,41 @@
 </section> <!-- End of about -->
 <section class="gallery">
     <h2 class="section-heading &:after">works</h2>
-    <div class="works">
+    <div class="gallery-works">
         <div><img src="img/gallery-image1.jpg" alt=""></div>
         <div><img src="img/gallery-image2.jpg" alt=""></div>
         <div><img src="img/gallery-image3.jpg" alt=""></div>
         <div><img src="img/gallery-image4.jpg" alt=""></div>
         <div><img src="img/gallery-image5.jpg" alt=""></div>
         <div><img src="img/gallery-image6.jpg" alt=""></div>
-        <button class="btn" type="button">Load more</button>
+        <button class="gallery-btn" type="button">Load more</button>
     </div>
 </section> <!-- end of gallery -->
 
 <section class="testimonials">
     <h3>See the world through my lens</h3>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-    <p>John Doe CEO at Unknown</p>
-    <div class="review__buttons">
-        <span class="review__button review__button--active"></span>
-        <span class="review__button"></span>
-        <span class="review__button"></span>
+    <div class="review-wrapper">
+        <blockquote class="review review--visible">
+            <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. </p>
+            <p class="review__author"> John Doe CEO at Unknown </p>
+        </blockquote>
+        <blockquote class="review">
+            <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. </p>
+            <p class="review__author"> John Doe CEO at Unknown </p>
+        </blockquote>
+        <blockquote class="review">
+            <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. </p>
+            <p class="review__author"> John Doe CEO at Unknown </p>
+        </blockquote>
+        <div class="review__buttons">
+            <span class="review__button review__button--active"></span>
+            <span class="review__button"></span>
+            <span class="review__button"></span>
+        </div>
     </div>
 </section> <!-- end of testimonials -->
 
-<section class="my-video">
+<section class="video">
     <p>watch my video</p>
 </section> <!-- end of my-video -->
 
@@ -77,11 +89,30 @@
     </div>
 </section> <!-- end of social -->
 
-<section class="contact-me">
-    <div>
+<section class="contact">
+    <div class="contact__image">
         <h2 class="section-heading &:after">contact me</h2>
-    </div>
-</section> <!-- end of contact-me -->
+        <blockquote class="contact-blockquote">
+            <p>Claritas est etiam processus dynamicus qui sequitur</p>
+        </blockquote>
+        <form class="contact__form">
+            <input class="contact__form--input" type="text" name="your-name" value="Your name">
+            <input class="contact__form--input" type="text" name="your-email" value="Your email">
+            <input type="text" name="your-message" value="Your message">
+
+            <div class="contact__form--submit">
+                <blockquote class="contact-blockquote">All fields marked with an asterisk (*) are required</blockquote>
+                <input type="submit" name="submit" value="sent">
+            </div>
+        </form>
+    </div> <!-- end of contact__image -->
+</section> <!-- end of contact -->
+
+<div class="footer">
+    <h1>MariaAnna</h1>
+    <h1 class="footer__photography">photography</h1>
+    <p class="footer__photography--copyright">© Copyright 2014 MariaAnna</p>
+</div>
 <script src="https://use.fontawesome.com/3e79a3d5c2.js"></script>
 
 </body>
