@@ -14,7 +14,7 @@ gulp.task("copy", function() {
     gulp.src("src/css/main.css")
         .pipe(gulp.dest("dist/css/"));
 // do obrazków też jest osobne zadanie które je minimalizuje i przenosi, ale darujemy sobie to więc niech zostanie to zadanko w kopiowaniu
-    gulp.src("src/img")
+    gulp.src("src/img/*")
         .pipe(gulp.dest("dist/img/"));
 });
 
