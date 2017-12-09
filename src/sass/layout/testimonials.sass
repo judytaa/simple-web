@@ -8,12 +8,12 @@
   flex-direction: column
   align-items: center
 
-  h3
+  h2
     color: $lightGray
     position: relative
     font-size: 25px
 
-  h3:after
+  h2:after
     content: ""
     background-color: $coral
     position: absolute
@@ -24,10 +24,10 @@
     transform: translateX(-50%)
 
   p
-    width: 25%
+    width: 50%
     text-align: center
     line-height: 30px
-    margin-top: 50px
+    margin: 50px auto 0 auto
     color: $lightGray
 
   p:last-child
@@ -39,8 +39,9 @@
   .review
     display: none
 
-  &-visible
+  .review--visible
     display: block
+    margin: 0 auto
 
   .review__buttons
     display: flex

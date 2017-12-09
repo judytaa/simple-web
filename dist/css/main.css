@@ -81,17 +81,17 @@ button {
     margin-top: 25px; }
 
 .gallery {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: center; }
+  align-items: center; }
   .gallery-works {
     display: grid;
-    margin: 0 auto;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 30% 30% auto;
     grid-column-gap: 25px;
-    grid-row-gap: 25px;
-    padding-top: 30px; }
+    grid-row-gap: 20px;
+    margin-top: 30px; }
   .gallery div:nth-child(1) {
     grid-row: 1;
     grid-column: 1 / 3; }
@@ -121,17 +121,38 @@ button {
     font-size: 16px;
     font-family: 'Roboto Condensed:300', sans-serif;
     margin-bottom: 25px; }
+  .gallery__work {
+    position: relative; }
+  .gallery__work--about {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%); }
+  .gallery h3 {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed:300', sans-serif;
+    font-size: 25px; }
+  .gallery h3:after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 142px;
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .header {
-  height: 96vh;
+  height: 90vh;
   margin: 25px 25px 0 25px;
   overflow: hidden;
   background-image: url("../img/photo-cover.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column; }
   .header h1 {
     font-family: 'Dancing Script', cursive;
@@ -152,36 +173,49 @@ button {
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%); }
-  .header h3 {
+  .header p {
     font-family: 'Roboto Condensed:300', sans-serif;
     font-size: 17px;
-    padding: 10px; }
-  .header-text {
+    padding: 10px;
     color: white;
     text-align: center; }
-  .header .photography {
+  .header .logo-author {
+    color: white;
+    text-align: center; }
+  .header .author-position {
     font-size: 20px;
     padding-bottom: 40px; }
+  .header span {
+    display: block; }
 
 .nav {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  bottom: 0;
-  border-bottom: 2px solid lightgray; }
+  margin: 0 25px; }
   .nav-wrapper {
     list-style-type: none;
     overflow: hidden;
     display: flex;
-    justify-content: flex-end; }
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    border-bottom: 1px solid lightgray;
+    padding: 10px; }
   .nav-link {
     font-family: 'Open Sans Condensed', sans-serif;
     color: #848282;
     text-decoration: none;
     padding: 0 50px;
     text-transform: uppercase; }
+  .nav-item:nth-child(2) {
+    position: relative; }
+  .nav-item:nth-child(2):after {
+    content: "";
+    background-color: #d07c7c;
+    width: 39px;
+    height: 2px;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute; }
 
 .testimonials {
   font-family: 'Roboto Condensed:300', sans-serif;
@@ -191,11 +225,11 @@ button {
   justify-content: center;
   flex-direction: column;
   align-items: center; }
-  .testimonials h3 {
+  .testimonials h2 {
     color: #848282;
     position: relative;
     font-size: 25px; }
-  .testimonials h3:after {
+  .testimonials h2:after {
     content: "";
     background-color: #d07c7c;
     position: absolute;
@@ -205,10 +239,10 @@ button {
     left: 50%;
     transform: translateX(-50%); }
   .testimonials p {
-    width: 25%;
+    width: 50%;
     text-align: center;
     line-height: 30px;
-    margin-top: 50px;
+    margin: 50px auto 0 auto;
     color: #848282; }
   .testimonials p:last-child {
     color: #a0a0a0;
@@ -217,8 +251,9 @@ button {
     margin-top: 20px; }
   .testimonials .review {
     display: none; }
-  .testimonials-visible {
-    display: block; }
+  .testimonials .review--visible {
+    display: block;
+    margin: 0 auto; }
   .testimonials .review__buttons {
     display: flex;
     flex-direction: row;
@@ -295,24 +330,24 @@ button {
     flex-direction: column;
     margin: 0 auto;
     width: 585px; }
-    .contact__form input:nth-child(3) {
-      padding: 60px;
-      border-style: solid;
-      border-width: 1px;
-      border-color: #d07c7c;
-      margin: 10px;
-      color: #a0a0a0; }
+  .contact textarea {
+    padding: 60px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d07c7c;
+    margin: 10px;
+    color: #a0a0a0; }
   .contact__form--submit {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .contact__form--submit input {
+    .contact__form--submit button {
       width: 145px;
-      height: 50px;
+      height: 40px;
       border-style: none;
       background-color: #d07c7c;
       color: white;
-      font-size: 16px;
+      font-size: 14px;
       text-transform: uppercase;
       font-family: 'Roboto Condensed:300', sans-serif;
       align-self: flex-end;
@@ -326,21 +361,49 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column; }
+  .contact p {
+    color: #848282;
+    font-size: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 25px 10px; }
+  .contact .contact__form--info {
+    width: 585px;
+    text-align: center;
+    color: #848282;
+    font-size: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 25px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
 
-.footer {
+footer {
+  height: 20vh;
+  background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 30vh;
-  background-color: white;
-  font-family: 'Dancing Script', cursive;
-  font-size: 20px;
-  line-height: 15px; }
-  .footer__photography {
+  justify-content: center; }
+  footer .logo-author {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    line-height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  footer h2 {
+    font-family: 'Roboto Condensed:300', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px; }
+  footer .author-name {
     font-size: 15px; }
-    .footer__photography--copyright {
-      font-size: 12px;
-      color: #a0a0a0;
-      font-family: 'Roboto Condensed:300', sans-serif;
-      padding: 20px; }
+  footer .author-position {
+    font-size: 10px;
+    bottom: -40px; }
+  footer .footer__copyright {
+    font-size: 12px;
+    color: #a0a0a0;
+    font-family: 'Roboto Condensed:300', sans-serif;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center; }

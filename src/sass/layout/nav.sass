@@ -1,17 +1,16 @@
 .nav
-  width: 100%
-  background-color: white
-  display: flex
-  justify-content: flex-end
-  position: absolute
-  bottom: 0
-  border-bottom: 2px solid lightgray
+  margin: 0 25px
 
   &-wrapper
     list-style-type: none
     overflow: hidden
     display: flex
+    flex-direction: row
     justify-content: flex-end
+    align-content: flex-end
+    border-bottom: 1px solid lightgray
+    padding: 10px
+
 
   &-link
     font-family: 'Open Sans Condensed', sans-serif
@@ -19,3 +18,16 @@
     text-decoration: none
     padding: 0 50px
     text-transform: uppercase
+
+  &-item:nth-child(2)
+    position: relative
+
+  &-item:nth-child(2):after
+    content: ""
+    background-color: $coral
+    width: 39px
+    height: 2px
+    bottom: -3px
+    left: 50%
+    transform: translateX(-50%)
+    position: absolute
