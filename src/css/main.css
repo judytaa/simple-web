@@ -142,6 +142,63 @@ button {
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%); }
+  .gallery p {
+    color: white;
+    font-family: 'Roboto Condensed:300', sans-serif;
+    position: absolute;
+    bottom: -50px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 200px;
+    text-align: center; }
+  .gallery .corner-top-left {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+    background-color: transparent;
+    border-style: solid;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    margin: -50%; }
+  .gallery .corner-top-right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: white;
+    border-right-color: white;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    margin: -50%;
+    left: 150%; }
+  .gallery .corner-bottom-right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: white;
+    border-bottom-color: white;
+    border-left-color: transparent;
+    margin: 50%;
+    left: 50%; }
+  .gallery .corner-bottom-left {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: white;
+    border-left-color: white;
+    margin: 50%;
+    left: -100%; }
 
 .header {
   height: 90vh;
@@ -190,6 +247,16 @@ button {
 
 .nav {
   margin: 0 25px; }
+  .nav h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; }
+  .nav .author-name {
+    font-family: 'Dancing Script', cursive; }
+  .nav .author-position {
+    font-family: 'Dancing Script', cursive;
+    font-size: 12px; }
   .nav-wrapper {
     list-style-type: none;
     overflow: hidden;
