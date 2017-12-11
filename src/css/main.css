@@ -65,6 +65,13 @@ button {
   font-size: 14px;
   padding: 30px; }
 
+.corner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-width: 2px;
+  border-style: solid; }
+
 .about {
   width: auto;
   height: 100vh;
@@ -111,8 +118,6 @@ button {
     grid-row: 3;
     grid-column: 3; }
   .gallery-btn {
-    grid-column: 2;
-    grid-row: 4;
     margin: 40px auto;
     width: 201px;
     height: 50px;
@@ -124,81 +129,64 @@ button {
   .gallery__work {
     position: relative; }
   .gallery__work--about {
+    width: 250px;
+    height: 200px;
     position: absolute;
-    bottom: 50%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%); }
-  .gallery h3 {
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .gallery .image-header {
     color: white;
     text-transform: uppercase;
     font-family: 'Roboto Condensed:300', sans-serif;
     font-size: 25px; }
-  .gallery h3:after {
+  .gallery .image-header:after {
     content: "";
     background-color: white;
     position: absolute;
     width: 142px;
     height: 2px;
-    bottom: -20px;
+    bottom: 50%;
     left: 50%;
     transform: translateX(-50%); }
   .gallery p {
-    color: white;
-    font-family: 'Roboto Condensed:300', sans-serif;
-    position: absolute;
-    bottom: -50px;
-    transform: translateX(-50%);
-    left: 50%;
-    width: 200px;
-    text-align: center; }
+    text-align: center;
+    color: white; }
   .gallery .corner-top-left {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-width: 2px;
     background-color: transparent;
-    border-style: solid;
     border-left-color: white;
     border-top-color: white;
     border-right-color: transparent;
     border-bottom-color: transparent;
-    margin: -50%; }
+    top: 0;
+    left: 0; }
   .gallery .corner-top-right {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-width: 2px;
-    border-style: solid;
     border-top-color: white;
     border-right-color: white;
     border-bottom-color: transparent;
     border-left-color: transparent;
-    margin: -50%;
-    left: 150%; }
+    top: 0;
+    right: 0; }
   .gallery .corner-bottom-right {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-width: 2px;
-    border-style: solid;
     border-top-color: transparent;
     border-right-color: white;
     border-bottom-color: white;
     border-left-color: transparent;
-    margin: 50%;
-    left: 50%; }
+    right: 0;
+    bottom: 0; }
   .gallery .corner-bottom-left {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-width: 2px;
-    border-style: solid;
     border-top-color: transparent;
     border-right-color: transparent;
     border-bottom-color: white;
     border-left-color: white;
-    margin: 50%;
-    left: -100%; }
+    left: 0;
+    bottom: 0; }
 
 .header {
   height: 90vh;
@@ -326,7 +314,8 @@ button {
     flex-direction: row;
     position: relative;
     padding: 30px;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     .testimonials .review__buttons .review__button:nth-child(1) {
       content: "";
       border-radius: 50%;
