@@ -41,7 +41,8 @@ button {
   color: #848282;
   text-transform: uppercase;
   position: relative;
-  bottom: 20px; }
+  bottom: 20px;
+  text-align: center; }
   .section-heading:after {
     content: "";
     background-color: #d07c7c;
@@ -67,8 +68,8 @@ button {
 
 .corner {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-width: 2px;
   border-style: solid; }
 
@@ -88,11 +89,7 @@ button {
     margin-top: 25px; }
 
 .gallery {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; }
+  margin: 0 25px; }
   .gallery-works {
     display: grid;
     grid-template-columns: 30% 30% auto;
@@ -118,6 +115,9 @@ button {
     grid-row: 3;
     grid-column: 3; }
   .gallery-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 40px auto;
     width: 201px;
     height: 50px;
@@ -136,7 +136,6 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 0;
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +144,8 @@ button {
     color: white;
     text-transform: uppercase;
     font-family: 'Roboto Condensed:300', sans-serif;
-    font-size: 25px; }
+    font-size: 25px;
+    margin-bottom: 20px; }
   .gallery .image-header:after {
     content: "";
     background-color: white;
@@ -157,7 +157,8 @@ button {
     transform: translateX(-50%); }
   .gallery p {
     text-align: center;
-    color: white; }
+    color: white;
+    margin: 15px; }
   .gallery .corner-top-left {
     background-color: transparent;
     border-left-color: white;
@@ -353,10 +354,47 @@ button {
   background-image: url("../img/video-image.jpg");
   background-size: cover;
   margin: 25px;
+  position: relative; }
+
+.play-button {
+  width: 100px;
+  height: 80px;
+  padding: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; }
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: transparent; }
+
+.play-button:before, .play-button:after {
+  content: '';
+  width: 200px;
+  height: 1px;
+  position: absolute;
+  transform: rotate(30deg);
+  background: #000000; }
+
+.play-button:before {
+  top: -10px;
+  left: -200px;
+  transform-origin: right; }
+
+.play-button:after {
+  bottom: 20px;
+  right: -200px;
+  transform-origin: left; }
+
+.play-button__img {
+  width: 60%; }
+
+.play-button__title {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 10px; }
 
 .social {
   margin: 25px;

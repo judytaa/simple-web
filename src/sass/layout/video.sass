@@ -3,7 +3,44 @@
   background-image: url('../img/video-image.jpg')
   background-size: cover
   margin: 25px
+  position: relative
+
+.play-button
+  width: 100px
+  height: 80px
+  padding: 0
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
   display: flex
-  flex-direction: row
-  justify-content: center
+  flex-direction: column
   align-items: center
+  border: none
+  background: transparent
+
+.play-button:before, .play-button:after
+  content: ''
+  width: 200px
+  height: 1px
+  position: absolute
+  transform: rotate(30deg)
+  background: #000000
+
+.play-button:before
+  top: -10px
+  left: -200px
+  transform-origin: right
+
+.play-button:after
+  bottom: 20px
+  right: -200px
+  transform-origin: left
+
+.play-button__img
+  width: 60%
+
+.play-button__title
+  margin-top: 20px
+  text-transform: uppercase
+  font-size: 10px
